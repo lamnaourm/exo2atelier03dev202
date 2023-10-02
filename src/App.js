@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Liste from './components/Liste';
 
+const listeElements = [
+  { id: 1, text: "Faire les courses", completed : true },
+   { id: 2, text: "Réviser pour l'examen" , completed : false },
+   { id: 3, text: "Aller chez le médecin", completed : true },
+   { id: 4, text: "Aller chez le médecin", completed : false },
+   { id: 5, text: "Aller chez le médecin", completed : true },
+  ];
+
+  
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Liste elements={listeElements}/>
     </div>
   );
 }
